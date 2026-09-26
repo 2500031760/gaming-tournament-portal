@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>User Dashboard</title><link rel="stylesheet" href="dashboard.css"></head>
+<body>
+<header><div class="brand">🎮 GameZone <span>User Module</span></div><nav><a href="index.html">Home</a><button id="logout" class="danger">Logout</button></nav></header>
+<main>
+<section class="welcome"><div><p class="tag">USER MODULE</p><h1>Welcome, <span id="userName"></span> 👋</h1><p>Browse tournaments and manage your registrations.</p></div></section>
+<section class="stats"><div><b id="total">0</b><small>Available Tournaments</small></div><div><b id="joined">0</b><small>My Registrations</small></div></section>
+<section><h2>Available Tournaments</h2><div id="tournaments" class="grid"></div></section>
+<section><h2>My Registrations</h2><div id="myRegistrations" class="registrations"></div></section>
+</main>
+<script src="user.js"></script>
+</body></html>

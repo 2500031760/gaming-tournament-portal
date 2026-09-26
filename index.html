@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming Tournament Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎮 GameZone</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tournaments">Tournaments</a>
+      <a href="#about">About</a>
+      <button id="loginNav" class="btn small">Login</button>
+      <button id="signupNav" class="btn small primary">Sign Up</button>
+      <button id="logoutNav" class="btn small danger hidden">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="tag">GAMING TOURNAMENT PORTAL</p>
+        <h1>Compete. <span>Conquer.</span> Repeat.</h1>
+        <p>Register for gaming tournaments, manage your profile, and track your participation from one portal.</p>
+        <div class="hero-actions">
+          <button class="btn primary" id="heroSignup">Join Tournament</button>
+          <button class="btn" id="heroLogin">Login</button>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="trophy">🏆</div>
+        <h3>Next Tournament</h3>
+        <p>Battle Arena Championship</p>
+        <strong>₹10,000 Prize Pool</strong>
+      </div>
+    </section>
+
+    <section id="tournaments" class="section">
+      <div class="section-title">
+        <div>
+          <p class="tag">UPCOMING</p>
+          <h2>Available Tournaments</h2>
+        </div>
+      </div>
+      <div id="tournamentGrid" class="grid"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div>
+        <p class="tag">ABOUT</p>
+        <h2>One Portal. Every Match.</h2>
+        <p>Gaming Tournament Portal is a front-end project built using only HTML, CSS and JavaScript. It provides separate user and admin modules with Local Storage based authentication and tournament management.</p>
+      </div>
+      <div class="features">
+        <div>🔐 <b>Secure Login UI</b><br><small>Local Storage authentication</small></div>
+        <div>🎯 <b>Tournament Registration</b><br><small>Users can join available events</small></div>
+        <div>⚙️ <b>Admin Management</b><br><small>Add, edit and delete tournaments</small></div>
+        <div>📱 <b>Responsive UI</b><br><small>CSS Grid and Flexbox layout</small></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="authModal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <div class="tabs">
+        <button id="loginTab" class="active">Login</button>
+        <button id="signupTab">Sign Up</button>
+      </div>
+
+      <form id="loginForm">
+        <h2>Welcome Back</h2>
+        <input id="loginEmail" type="email" placeholder="Email" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
+        <button class="btn primary full" type="submit">Login</button>
+        <p class="hint">Admin demo: admin@gaming.com / admin123</p>
+      </form>
+
+      <form id="signupForm" class="hidden">
+        <h2>Create Account</h2>
+        <input id="signupName" type="text" placeholder="Full Name" required>
+        <input id="signupEmail" type="email" placeholder="Email" required>
+        <input id="signupPassword" type="password" placeholder="Password (min 6 chars)" minlength="6" required>
+        <button class="btn primary full" type="submit">Create Account</button>
+      </form>
+      <p id="authMessage" class="message"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
